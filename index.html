@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Historia Clínica — Tratamiento Estético Facial</title>
+<link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,500,600,700&f[]=satoshi@300,400,500,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="form-header">
+  <div class="header-inner">
+    <div class="logo-area">
+      <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Logo estética facial">
+        <circle cx="20" cy="16" r="10" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M14 14c0 0 2 4 6 4s6-4 6-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M16 12.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM24 12.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" fill="currentColor"/>
+        <path d="M20 26v6M16 38c0-4 2-6 4-6s4 2 4 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+      <div>
+        <h1 class="header-title">Historia Clínica</h1>
+        <p class="header-subtitle">Tratamiento Estético Facial</p>
+      </div>
+    </div>
+    <p class="header-brand">Massiel Daniela Ruiz Otairo</p>
+  </div>
+</header>
+
+<main class="form-container">
+  <form id="fichaForm" novalidate>
+
+    <!-- ============================================ -->
+    <!-- SECTION 1-2: DATOS GENERALES -->
+    <!-- ============================================ -->
+    <section class="form-section">
+      <div class="section-header">
+        <span class="section-number">01</span>
+        <h2 class="section-title">Datos Personales</h2>
+      </div>
+
+      <div class="field-grid cols-2">
+        <div class="field">
+          <label for="cosmiatra">Nombre de la cosmiatra</label>
+          <input type="text" id="cosmiatra" name="cosmiatra" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="fecha_ingreso">Fecha de ingreso</label>
+          <input type="date" id="fecha_ingreso" name="fecha_ingreso">
+        </div>
+      </div>
+
+      <div class="field-grid cols-2">
+        <div class="field">
+          <label for="apellido_nombre">Apellido y nombre</label>
+          <input type="text" id="apellido_nombre" name="apellido_nombre" autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="domicilio">Domicilio</label>
+          <input type="text" id="domicilio" name="domicilio" autocomplete="street-address">
+        </div>
+      </div>
+
+      <div class="field-grid cols-4">
+        <div class="field">
+          <label for="fecha_nacimiento">Fecha de nacimiento</label>
+          <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
+        </div>
+        <div class="field">
+          <label for="edad">Edad</label>
+          <input type="number" id="edad" name="edad" min="0" max="120">
+        </div>
+        <div class="field">
+          <label for="ocupacion">Ocupación</label>
+          <input type="text" id="ocupacion" name="ocupacion">
+        </div>
+        <div class="field">
+          <label for="hijos">Hijos</label>
+          <input type="text" id="hijos" name="hijos">
+        </div>
+      </div>
+
+      <div class="field-grid cols-2">
+        <div class="field">
+          <label for="telefono">Teléfono o celular</label>
+          <input type="tel" id="telefono" name="telefono" autocomplete="tel">
+        </div>
+        <div class="field">
+          <label>Biotipo cutáneo</label>
+          <div class="chip-group">
+            <label class="chip"><input type="radio" name="biotipo" value="seco"><span>Seco</span></label>
+            <label class="chip"><input type="radio" name="biotipo" value="graso"><span>Graso</span></label>
+            <label class="chip"><input type="radio" name="biotipo" value="mixto"><span>Mixto</span></label>
+            <label class="chip"><input type="radio" name="biotipo" value="normal"><span>Normal</span></label>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="condicion">Condición</label>
+        <input type="text" id="condicion" name="condicion">
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 3: MOTIVO DE CONSULTA -->
+    <!-- ============================================ -->
+    <section class="form-section">
+      <div class="section-header">
+        <span class="section-number">02</span>
+        <h2 class="section-title">Motivo de la Consulta</h2>
+      </div>
+      <div class="field">
+        <textarea id="motivo_consulta" name="motivo_consulta" rows="3" placeholder="Describa el motivo de la consulta..."></textarea>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 4: ANTECEDENTES PERSONALES -->
+    <!-- ============================================ -->
+    <section class="form-section">
+      <div class="section-header">
+        <span class="section-number">03</span>
+        <h2 class="section-title">Antecedentes Personales</h2>
+      </div>
+
+      <p class="section-desc">Enfermedades o condiciones previas</p>
+
+      <div class="field-grid cols-2">
+        <div class="antecedentes-list">
+          <label class="toggle-row">
+            <span>Cardiovasculares</span>
+            <div class="toggle-group">
+              <label class="chip-sm"><input type="radio" name="cardiov" value="si"><span>Sí</span></label>
+              <label class="chip-sm"><input type="radio" name="cardiov" value="no"><span>No</span></label>
+            </div>
+          </label>
+          <label class="toggle-row">
+            <span>Pulmonares</span>
+            <div class="toggle-group">
+              <label class="chip-sm"><input type="radio" name="pulmon" value="si"><span>Sí</span></label>
+              <label class="chip-sm"><input type="radio" name="pulmon" value="no"><span>No</span></label>
+            </div>
+          </label>
+          <label class="toggle-row">
+            <span>Renales</span>
+            <div class="toggle-group">
+              <label class="chip-sm"><input type="radio" name="renales" value="si"><span>Sí</span></label>
+              <label class="chip-sm"><input type="radio" name="renales" value="no"><span>No</span></label>
+            </div>
+          </label>
+          <label class="toggle-row">
+            <span>Gastrointestinales</span>
+            <div class="toggle-group">
+              <label class="chip-sm"><input type="radio" name="gastro" value="si"><span>Sí</span></label>
+              <label class="chip-sm"><input type="radio" name="gastro" value="no"><span>No</span></label>
+            </div>
+          </label>
+          <label class="toggle-row">
+            <span>Hematológicos</span>
+            <div class="toggle-group">
+              <label class="chip-sm"><input type="radio" name="hemato" value="si"><span>Sí</span></label>
+              <label class="chip-sm"><input type="radio" name="hemato" value="no"><span>No</span></label>
+            </div>
+          </label>
+          <label class="toggle-row">
+            <span>Endocrinas</span>
+            <div class="toggle-group">
+              <label class="chip-sm"><input type="radio" name="endocr" value="si"><span>Sí</span></label>
+              <label class="chip-sm"><input type="radio" name="endocr" value="no"><span>No</span></label>
+            </div>
+          </label>
+          <label class="toggle-row">
+            <span>Neurológicos</span>
+            <div class="toggle-group">
+              <label class="chip-sm"><input type="radio" name="neuro" value="si"><span>Sí</span></label>
+              <label class="chip-sm"><input type="radio" name="neuro" value="no"><span>No</span></label>
+            </div>
+          </label>
+          <label class="toggle-row">
+            <span>Psicológicos</span>
+            <div class="toggle-group">
+              <label class="chip-sm"><input type="radio" name="psico" value="si"><span>Sí</span></label>
+              <label class="chip-sm"><input type="radio" name="psico" value="no"><span>No</span></label>
+            </div>
+          </label>
+          <label class="toggle-row">
+            <span>Dermatológicos</span>
+            <div class="toggle-group">
+              <label class="chip-sm"><input type="radio" name="derma" value="si"><span>Sí</span></label>
+              <label class="chip-sm"><input type="radio" name="derma" value="no"><span>No</span></label>
+            </div>
+          </label>
+          <label class="toggle-row">
+            <span>Metabólicos</span>
+            <div class="toggle-group">
+              <label class="chip-sm"><input type="radio" name="metab" value="si"><span>Sí</span></label>
+              <label class="chip-sm"><input type="radio" name="metab" value="no"><span>No</span></label>
+            </div>
+          </label>
+          <div class="field" style="margin-top: var(--space-3);">
+            <label for="otros_antec">Otros</label>
+            <input type="text" id="otros_antec" name="otros_antec">
+          </div>
+        </div>
+
+        <div class="antecedentes-detail">
+          <div class="field">
+            <label for="marcapasos">Marcapasos</label>
+            <input type="text" id="marcapasos" name="marcapasos">
+          </div>
+          <div class="field">
+            <label for="cardiopatias">Cardiopatías</label>
+            <input type="text" id="cardiopatias" name="cardiopatias">
+          </div>
+          <div class="field">
+            <label for="neuropatias">Neuropatías</label>
+            <input type="text" id="neuropatias" name="neuropatias">
+          </div>
+          <div class="field">
+            <label for="alergias">Alergias</label>
+            <input type="text" id="alergias" name="alergias">
+          </div>
+          <div class="field">
+            <label for="quirurgicos">Quirúrgicos</label>
+            <input type="text" id="quirurgicos" name="quirurgicos">
+          </div>
+          <div class="field">
+            <label for="hospitalizaciones">Hospitalizaciones</label>
+            <input type="text" id="hospitalizaciones" name="hospitalizaciones">
+          </div>
+          <div class="field">
+            <label for="implantes">Implantes</label>
+            <input type="text" id="implantes" name="implantes">
+          </div>
+          <div class="field">
+            <label for="tatuajes">Tatuajes</label>
+            <input type="text" id="tatuajes" name="tatuajes">
+          </div>
+          <div class="field">
+            <label for="medicamentos">Medicamentos</label>
+            <input type="text" id="medicamentos" name="medicamentos">
+          </div>
+          <div class="field">
+            <label for="alimentacion_ant">Alimentación</label>
+            <input type="text" id="alimentacion_ant" name="alimentacion_ant">
+          </div>
+          <div class="field">
+            <label for="otros_detail">Otros</label>
+            <input type="text" id="otros_detail" name="otros_detail">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 5: ANTECEDENTES COSMIATRICOS -->
+    <!-- ============================================ -->
+    <section class="form-section">
+      <div class="section-header">
+        <span class="section-number">04</span>
+        <h2 class="section-title">Antecedentes Cosmiátricos</h2>
+      </div>
+
+      <div class="field-grid cols-3">
+        <div class="field">
+          <label>Grado de deshidratación</label>
+          <div class="chip-group">
+            <label class="chip"><input type="radio" name="deshidratacion" value="leve"><span>Leve</span></label>
+            <label class="chip"><input type="radio" name="deshidratacion" value="medio"><span>Medio</span></label>
+            <label class="chip"><input type="radio" name="deshidratacion" value="alto"><span>Alto</span></label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 6: FOTOTIPO -->
+    <!-- ============================================ -->
+    <section class="form-section">
+      <div class="section-header">
+        <span class="section-number">05</span>
+        <h2 class="section-title">Fototipo</h2>
+      </div>
+      <div class="fototipo-grid">
+        <label class="fototipo-card">
+          <input type="radio" name="fototipo" value="1">
+          <div class="fototipo-inner">
+            <div class="fototipo-swatch" style="background: #fde8d0;"></div>
+            <span class="fototipo-label">I</span>
+            <span class="fototipo-desc">Muy clara</span>
+          </div>
+        </label>
+        <label class="fototipo-card">
+          <input type="radio" name="fototipo" value="2">
+          <div class="fototipo-inner">
+            <div class="fototipo-swatch" style="background: #f5d5b3;"></div>
+            <span class="fototipo-label">II</span>
+            <span class="fototipo-desc">Clara</span>
+          </div>
+        </label>
+        <label class="fototipo-card">
+          <input type="radio" name="fototipo" value="3">
+          <div class="fototipo-inner">
+            <div class="fototipo-swatch" style="background: #d4a574;"></div>
+            <span class="fototipo-label">III</span>
+            <span class="fototipo-desc">Intermedia</span>
+          </div>
+        </label>
+        <label class="fototipo-card">
+          <input type="radio" name="fototipo" value="4">
+          <div class="fototipo-inner">
+            <div class="fototipo-swatch" style="background: #a67c52;"></div>
+            <span class="fototipo-label">IV</span>
+            <span class="fototipo-desc">Morena</span>
+          </div>
+        </label>
+        <label class="fototipo-card">
+          <input type="radio" name="fototipo" value="5">
+          <div class="fototipo-inner">
+            <div class="fototipo-swatch" style="background: #7a5230;"></div>
+            <span class="fototipo-label">V</span>
+            <span class="fototipo-desc">Oscura</span>
+          </div>
+        </label>
+        <label class="fototipo-card">
+          <input type="radio" name="fototipo" value="6">
+          <div class="fototipo-inner">
+            <div class="fototipo-swatch" style="background: #4a3121;"></div>
+            <span class="fototipo-label">VI</span>
+            <span class="fototipo-desc">Muy oscura</span>
+          </div>
+        </label>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 7: FOTODAÑO -->
+    <!-- ============================================ -->
+    <section class="form-section">
+      <div class="section-header">
+        <span class="section-number">06</span>
+        <h2 class="section-title">Fotodaño</h2>
+      </div>
+
+      <div class="field-grid cols-2">
+        <div>
+          <div class="field">
+            <label>Arrugas</label>
+            <div class="chip-group">
+              <label class="chip"><input type="radio" name="arrugas_tipo" value="prematuro"><span>Prematuro</span></label>
+              <label class="chip"><input type="radio" name="arrugas_tipo" value="cronologico"><span>Cronológico</span></label>
+            </div>
+          </div>
+          <div class="field">
+            <label class="checkbox-label"><input type="checkbox" name="piel_gruesa" value="si"> Piel gruesa</label>
+          </div>
+          <div class="field">
+            <label class="checkbox-label"><input type="checkbox" name="enrojecimiento" value="si"> Enrojecimiento</label>
+          </div>
+        </div>
+        <div>
+          <div class="field">
+            <label>Líneas de expresión</label>
+            <div class="check-list">
+              <label class="checkbox-label"><input type="checkbox" name="lineas_naso" value="si"> Naso geniano</label>
+              <label class="checkbox-label"><input type="checkbox" name="lineas_entrecejos" value="si"> Entrecejos</label>
+              <label class="checkbox-label"><input type="checkbox" name="lineas_periorbicular" value="si"> Peri orbicular</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 8: SEGÚN LA EPIDERMIS -->
+    <!-- ============================================ -->
+    <section class="form-section">
+      <div class="section-header">
+        <span class="section-number">07</span>
+        <h2 class="section-title">Según la Epidermis</h2>
+      </div>
+
+      <div class="field-grid cols-2">
+        <div class="field">
+          <label>Grosor — Piel gruesa</label>
+          <div class="chip-group vertical">
+            <label class="chip"><input type="radio" name="grosor_gruesa" value="gruesa"><span>Gruesa</span></label>
+            <label class="chip"><input type="radio" name="grosor_gruesa" value="levemente_gruesa"><span>Levemente gruesa</span></label>
+            <label class="chip"><input type="radio" name="grosor_gruesa" value="medianamente_gruesa"><span>Medianamente gruesa</span></label>
+            <label class="chip"><input type="radio" name="grosor_gruesa" value="muy_gruesa"><span>Muy gruesa</span></label>
+          </div>
+        </div>
+        <div class="field">
+          <label>Grosor — Piel fina</label>
+          <div class="chip-group vertical">
+            <label class="chip"><input type="radio" name="grosor_fina" value="fina"><span>Fina</span></label>
+            <label class="chip"><input type="radio" name="grosor_fina" value="levemente_fina"><span>Levemente fina</span></label>
+            <label class="chip"><input type="radio" name="grosor_fina" value="medianamente_fina"><span>Medianamente fina</span></label>
+            <label class="chip"><input type="radio" name="grosor_fina" value="muy_fina"><span>Muy fina</span></label>
+          </div>
+        </div>
+      </div>
+
+      <div class="field-grid cols-2" style="margin-top: var(--space-4);">
+        <div class="field">
+          <label>Según la Dermis</label>
+          <div class="chip-group">
+            <label class="chip"><input type="radio" name="dermis" value="flacida"><span>Flácida</span></label>
+            <label class="chip"><input type="radio" name="dermis" value="tonica"><span>Tónica</span></label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 9: EVALUACION DIETETICA -->
+    <!-- ============================================ -->
+    <section class="form-section">
+      <div class="section-header">
+        <span class="section-number">08</span>
+        <h2 class="section-title">Evaluación Dietética</h2>
+      </div>
+
+      <div class="field">
+        <label>Apetito</label>
+        <div class="chip-group">
+          <label class="chip"><input type="radio" name="apetito" value="bueno"><span>Bueno</span></label>
+          <label class="chip"><input type="radio" name="apetito" value="regular"><span>Regular</span></label>
+          <label class="chip"><input type="radio" name="apetito" value="malo"><span>Malo</span></label>
+        </div>
+      </div>
+
+      <p class="field-label" style="margin-top: var(--space-4);">Frecuencia de alimentos</p>
+      <div class="field-grid cols-2">
+        <div class="field">
+          <label for="azucares">Azúcares</label>
+          <input type="text" id="azucares" name="azucares">
+        </div>
+        <div class="field">
+          <label for="lacteos">Lácteos</label>
+          <input type="text" id="lacteos" name="lacteos">
+        </div>
+        <div class="field">
+          <label for="frutas">Frutas</label>
+          <input type="text" id="frutas" name="frutas">
+        </div>
+        <div class="field">
+          <label for="verduras">Verduras</label>
+          <input type="text" id="verduras" name="verduras">
+        </div>
+        <div class="field">
+          <label for="carnes_rojas">Carnes rojas</label>
+          <input type="text" id="carnes_rojas" name="carnes_rojas">
+        </div>
+        <div class="field">
+          <label for="carnes_blancas">Carnes blancas</label>
+          <input type="text" id="carnes_blancas" name="carnes_blancas">
+        </div>
+        <div class="field">
+          <label for="harinas">Harinas</label>
+          <input type="text" id="harinas" name="harinas">
+        </div>
+        <div class="field">
+          <label for="grasas">Grasas</label>
+          <input type="text" id="grasas" name="grasas">
+        </div>
+      </div>
+
+      <div class="field-grid cols-3" style="margin-top: var(--space-3);">
+        <div class="field">
+          <label for="comidas_dia">Comidas al día</label>
+          <input type="number" id="comidas_dia" name="comidas_dia" min="0" max="12">
+        </div>
+        <div class="field">
+          <label for="intolerancias">Alimentos que causan intolerancia</label>
+          <input type="text" id="intolerancias" name="intolerancias">
+        </div>
+        <div class="field">
+          <label for="liquidos">Consumo de líquidos (ml)</label>
+          <input type="number" id="liquidos" name="liquidos" min="0" step="100">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 10: PATOLOGÍAS CUTÁNEAS -->
+    <!-- ============================================ -->
+    <section class="form-section">
+      <div class="section-header">
+        <span class="section-number">09</span>
+        <h2 class="section-title">Patologías Cutáneas</h2>
+      </div>
+
+      <p class="section-desc">Seleccione todas las que apliquen</p>
+
+      <div class="patologias-grid">
+        <!-- Column 1 -->
+        <div class="patologia-col">
+          <label class="checkbox-label"><input type="checkbox" name="pat_no_melanocitica" value="si"> No melanocítica</label>
+          <div class="sub-checks">
+            <label class="checkbox-label"><input type="checkbox" name="pat_nevus" value="si"> Nevus</label>
+            <label class="checkbox-label"><input type="checkbox" name="pat_lentigo_senil" value="si"> Lentigo senil</label>
+          </div>
+          <label class="checkbox-label"><input type="checkbox" name="pat_dermatitis_berloque" value="si"> Dermatitis de Berloque</label>
+          <label class="checkbox-label"><input type="checkbox" name="pat_rosacea" value="si"> Rosácea</label>
+          <div class="sub-checks">
+            <label class="checkbox-label"><input type="checkbox" name="pat_rosacea_g1" value="si"> Grado 1</label>
+            <label class="checkbox-label"><input type="checkbox" name="pat_rosacea_g2" value="si"> Grado 2</label>
+            <label class="checkbox-label"><input type="checkbox" name="pat_rosacea_g3" value="si"> Grado 3</label>
+          </div>
+          <label class="checkbox-label"><input type="checkbox" name="pat_hipo_pig" value="si"> Hipo pigmentación</label>
+          <div class="sub-checks">
+            <label class="checkbox-label"><input type="checkbox" name="pat_vitiligo" value="si"> Vitiligo</label>
+            <label class="checkbox-label"><input type="checkbox" name="pat_pitiriasis" value="si"> Pitiriasis versicolor</label>
+            <label class="checkbox-label"><input type="checkbox" name="pat_albinismo" value="si"> Albinismo</label>
+            <label class="checkbox-label"><input type="checkbox" name="pat_hipo_otros" value="si"> Otros</label>
+          </div>
+          <label class="checkbox-label"><input type="checkbox" name="pat_afeccion_parpados" value="si"> Afección en los párpados</label>
+          <div class="sub-checks">
+            <label class="checkbox-label"><input type="checkbox" name="pat_ojeras" value="si"> Ojeras</label>
+            <label class="checkbox-label"><input type="checkbox" name="pat_irritacion" value="si"> Irritación</label>
+            <label class="checkbox-label"><input type="checkbox" name="pat_orzuelo" value="si"> Orzuelo</label>
+            <label class="checkbox-label"><input type="checkbox" name="pat_parp_otros" value="si"> Otros</label>
+          </div>
+          <label class="checkbox-label"><input type="checkbox" name="pat_angiomas" value="si"> Angiomas</label>
+          <label class="checkbox-label"><input type="checkbox" name="pat_queratosis_actinica" value="si"> Queratosis actínica</label>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="patologia-col">
+          <label class="checkbox-label"><input type="checkbox" name="pat_telangiectasia" value="si"> Telangiectasia</label>
+          <label class="checkbox-label"><input type="checkbox" name="pat_cicatrices" value="si"> Cicatrices</label>
+          <div class="sub-checks">
+            <label class="checkbox-label"><input type="checkbox" name="pat_cic_deprimidas" value="si"> Deprimidas</label>
+            <label class="checkbox-label"><input type="checkbox" name="pat_cic_queloides" value="si"> Queloides</label>
+            <label class="checkbox-label"><input type="checkbox" name="pat_cic_atroficas" value="si"> Atróficas</label>
+            <label class="checkbox-label"><input type="checkbox" name="pat_cic_hipertroficas" value="si"> Hipertróficas</label>
+            <label class="checkbox-label"><input type="checkbox" name="pat_cic_congestivas" value="si"> Congestivas</label>
+          </div>
+          <label class="checkbox-label"><input type="checkbox" name="pat_costra" value="si"> Costra</label>
+          <label class="checkbox-label"><input type="checkbox" name="pat_verruga" value="si"> Verruga</label>
+          <label class="checkbox-label"><input type="checkbox" name="pat_eritema" value="si"> Eritema</label>
+          <div class="sub-checks">
+            <label class="checkbox-label"><input type="checkbox" name="pat_eritema_establ" value="si"> Establecido</label>
+            <label class="checkbox-label"><input type="checkbox" name="pat_eritema_manip" value="si"> Manipulación</label>
+          </div>
+          <label class="checkbox-label"><input type="checkbox" name="pat_punto_rubi" value="si"> Punto rubí</label>
+          <label class="checkbox-label"><input type="checkbox" name="pat_ampollas" value="si"> Ampollas</label>
+          <label class="checkbox-label"><input type="checkbox" name="pat_vesiculas" value="si"> Vesículas</label>
+          <label class="checkbox-label"><input type="checkbox" name="pat_melanotica" value="si"> Melanótica</label>
+          <div class="sub-checks">
+            <label class="checkbox-label"><input type="checkbox" name="pat_melasma" value="si"> Melasma</label>
+            <label class="checkbox-label"><input type="checkbox" name="pat_lentigo" value="si"> Léntigo</label>
+            <label class="checkbox-label"><input type="checkbox" name="pat_efelides" value="si"> Efélides</label>
+          </div>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="patologia-col">
+          <label class="checkbox-label"><input type="checkbox" name="pat_arrugas" value="si"> Arrugas</label>
+          <div class="sub-checks">
+            <label class="checkbox-label"><input type="checkbox" name="pat_arrugas_superf" value="si"> Superficiales</label>
+            <label class="checkbox-label"><input type="checkbox" name="pat_arrugas_prof" value="si"> Profundas</label>
+          </div>
+          <label class="checkbox-label"><input type="checkbox" name="pat_micosis" value="si"> Micosis</label>
+          <label class="checkbox-label"><input type="checkbox" name="pat_hiperpigmentacion" value="si"> Hiperpigmentaciones</label>
+          <div class="sub-checks">
+            <label class="checkbox-label"><input type="checkbox" name="pat_hiper_solar" value="si"> Solar</label>
+            <label class="checkbox-label"><input type="checkbox" name="pat_hiper_hormonal" value="si"> Hormonal</label>
+            <label class="checkbox-label"><input type="checkbox" name="pat_hiper_medicam" value="si"> Medicamentos</label>
+          </div>
+          <label class="checkbox-label"><input type="checkbox" name="pat_hirsutismo" value="si"> Hirsutismo</label>
+          <label class="checkbox-label"><input type="checkbox" name="pat_urticaria" value="si"> Urticaria</label>
+          <label class="checkbox-label"><input type="checkbox" name="pat_afec_labios" value="si"> Afecciones de los labios</label>
+          <label class="checkbox-label"><input type="checkbox" name="pat_angioma_vascular" value="si"> Angioma vascular</label>
+          <div class="sub-checks">
+            <label class="checkbox-label"><input type="checkbox" name="pat_angioma_plano" value="si"> Plano</label>
+            <label class="checkbox-label"><input type="checkbox" name="pat_angioma_hipert" value="si"> Hipertrófico</label>
+          </div>
+          <label class="checkbox-label"><input type="checkbox" name="pat_alteracion_pilosa" value="si"> Alteración pilosa</label>
+          <label class="checkbox-label"><input type="checkbox" name="pat_eczema" value="si"> Eczema</label>
+          <label class="checkbox-label"><input type="checkbox" name="pat_cuerno_cutaneo" value="si"> Cuerno cutáneo</label>
+          <label class="checkbox-label"><input type="checkbox" name="pat_cloasma" value="si"> Cloasma</label>
+          <label class="checkbox-label"><input type="checkbox" name="pat_otro" value="si"> Otro</label>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 11: TENDENCIA ACNEICA -->
+    <!-- ============================================ -->
+    <section class="form-section">
+      <div class="section-header">
+        <span class="section-number">10</span>
+        <h2 class="section-title">Tendencia Acneica</h2>
+      </div>
+
+      <div class="field">
+        <div class="chip-group">
+          <label class="chip"><input type="radio" name="tendencia_acneica" value="si"><span>Sí</span></label>
+          <label class="chip"><input type="radio" name="tendencia_acneica" value="no"><span>No</span></label>
+        </div>
+      </div>
+
+      <div class="field-grid cols-2" style="margin-top: var(--space-4);">
+        <div>
+          <p class="field-label">Acné inflamatorio</p>
+          <div class="check-list">
+            <label class="checkbox-label"><input type="checkbox" name="acne_comedones_cerr" value="si"> Comedones cerrados</label>
+            <label class="checkbox-label"><input type="checkbox" name="acne_comedon_abierto" value="si"> Comedón abierto</label>
+            <label class="checkbox-label"><input type="checkbox" name="acne_cosmetico" value="si"> Acné cosmético</label>
+            <label class="checkbox-label"><input type="checkbox" name="acne_quimico" value="si"> Acné por sustancias químicas</label>
+          </div>
+        </div>
+        <div>
+          <p class="field-label">Acné no inflamatorio</p>
+          <div class="check-list">
+            <label class="checkbox-label"><input type="checkbox" name="acne_papulas" value="si"> Pápulas</label>
+            <label class="checkbox-label"><input type="checkbox" name="acne_pustulas" value="si"> Pústulas</label>
+            <label class="checkbox-label"><input type="checkbox" name="acne_quistes" value="si"> Quistes</label>
+            <label class="checkbox-label"><input type="checkbox" name="acne_millium" value="si"> Millium</label>
+            <label class="checkbox-label"><input type="checkbox" name="acne_forunculos" value="si"> Forúnculos</label>
+            <label class="checkbox-label"><input type="checkbox" name="acne_nodulos" value="si"> Nódulos</label>
+            <label class="checkbox-label"><input type="checkbox" name="acne_conglobata" value="si"> Acné conglobata</label>
+            <label class="checkbox-label"><input type="checkbox" name="acne_queratosis" value="si"> Queratosis pilaris seborreica</label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 12: DIAGNOSTICO -->
+    <!-- ============================================ -->
+    <section class="form-section">
+      <div class="section-header">
+        <span class="section-number">11</span>
+        <h2 class="section-title">Diagnóstico (DX)</h2>
+      </div>
+      <div class="field">
+        <textarea id="diagnostico" name="diagnostico" rows="5" placeholder="Escriba el diagnóstico..."></textarea>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 13: TRATAMIENTO -->
+    <!-- ============================================ -->
+    <section class="form-section">
+      <div class="section-header">
+        <span class="section-number">12</span>
+        <h2 class="section-title">Tratamiento (Protocolo)</h2>
+      </div>
+      <div class="field">
+        <textarea id="tratamiento" name="tratamiento" rows="5" placeholder="Describa el protocolo de tratamiento..."></textarea>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 14: AUTORIZACION -->
+    <!-- ============================================ -->
+    <section class="form-section section-consent">
+      <div class="section-header">
+        <span class="section-number">13</span>
+        <h2 class="section-title">Autorización para el Procedimiento</h2>
+      </div>
+
+      <div class="consent-text">
+        <p>Yo (paciente) autorizo al especialista, bajo mi responsabilidad con todos los datos verídicos, a realizar el siguiente procedimiento. Los libero de toda responsabilidad que se presente por causa de la naturaleza de la piel y ajenos al tratamiento, certifico que he leído y entendido muy claramente la explicación sobre el tratamiento y la responsabilidad que yo tengo para el éxito de este y las precauciones que debo tener. Mi firma certifica mi aprobación para realizarlo.</p>
+        <p>Consiento en aportar datos personales antes y después del tratamiento, siendo este material de diagnóstico y de registro para mi historia clínica.</p>
+        <p>Me comprometo a seguir fielmente las instrucciones impartidas por el centro de estética facial y corporal para antes, durante y después de la intervención.</p>
+      </div>
+
+      <div class="field-grid cols-2" style="margin-top: var(--space-4);">
+        <div class="field">
+          <label for="paciente_nombre_auth">Nombre del paciente</label>
+          <input type="text" id="paciente_nombre_auth" name="paciente_nombre_auth">
+        </div>
+        <div class="field">
+          <label for="paciente_dni">N° DNI</label>
+          <input type="text" id="paciente_dni" name="paciente_dni">
+        </div>
+      </div>
+      <div class="field">
+        <label for="direccion_auth">Dirección</label>
+        <input type="text" id="direccion_auth" name="direccion_auth">
+      </div>
+      <div class="field">
+        <label for="procedimiento_auth">Procedimiento autorizado</label>
+        <textarea id="procedimiento_auth" name="procedimiento_auth" rows="2"></textarea>
+      </div>
+
+      <!-- Contraindicaciones -->
+      <div class="contraindications">
+        <p class="field-label">Contraindicaciones</p>
+        <ul>
+          <li>Embarazo</li>
+          <li>Implantes metálicos de cualquier índole</li>
+          <li>Problemas cardíacos</li>
+          <li>Trombosis, tromboflebitis o hemorragias activas</li>
+          <li>Patologías vasculares activas</li>
+          <li>Anticoagulantes</li>
+          <li>Diabetes</li>
+          <li>Lesiones o estados inflamatorios del tímpano</li>
+          <li>Dermatitis, infecciones cutáneas</li>
+          <li>Epilepsia</li>
+          <li>Hernia abdominal</li>
+          <li>Problemas del hígado, insuficiencia renal o hepática</li>
+          <li>Enfermedad de Raynaud, urticaria al frío</li>
+          <li>Tratamientos oncológicos</li>
+        </ul>
+      </div>
+
+      <!-- FIRMAS -->
+      <div class="signatures">
+        <div class="signature-block">
+          <label>Firma del paciente</label>
+          <canvas id="signaturePaciente" class="signature-pad" width="400" height="160"></canvas>
+          <div class="signature-actions">
+            <button type="button" class="btn-clear-sig" data-target="signaturePaciente">Borrar firma</button>
+          </div>
+          <div class="field" style="margin-top: var(--space-2);">
+            <label for="dni_firma">DNI</label>
+            <input type="text" id="dni_firma" name="dni_firma">
+          </div>
+        </div>
+        <div class="signature-block">
+          <label>Firma de la cosmiatra</label>
+          <canvas id="signatureCosmiatra" class="signature-pad" width="400" height="160"></canvas>
+          <div class="signature-actions">
+            <button type="button" class="btn-clear-sig" data-target="signatureCosmiatra">Borrar firma</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 15: RUTINA DOMICILIAR -->
+    <!-- ============================================ -->
+    <section class="form-section">
+      <div class="section-header">
+        <span class="section-number">14</span>
+        <h2 class="section-title">Rutina Domiciliar</h2>
+      </div>
+      <div class="field-grid cols-2">
+        <div class="field">
+          <label for="rutina_dia">Día</label>
+          <textarea id="rutina_dia" name="rutina_dia" rows="4" placeholder="Productos y rutina de día..."></textarea>
+        </div>
+        <div class="field">
+          <label for="rutina_noche">Noche</label>
+          <textarea id="rutina_noche" name="rutina_noche" rows="4" placeholder="Productos y rutina de noche..."></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 16: FOTO / EVIDENCIA -->
+    <!-- ============================================ -->
+    <section class="form-section">
+      <div class="section-header">
+        <span class="section-number">15</span>
+        <h2 class="section-title">Foto / Evidencia</h2>
+      </div>
+      <div class="field-grid cols-2">
+        <div class="photo-upload">
+          <label>Antes</label>
+          <div class="photo-drop" id="dropBefore" data-target="inputBefore">
+            <input type="file" id="inputBefore" accept="image/*" capture="environment" hidden>
+            <div class="photo-placeholder" id="placeholderBefore">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+              <span>Toque para agregar foto</span>
+            </div>
+            <img id="previewBefore" class="photo-preview" alt="Foto antes">
+          </div>
+        </div>
+        <div class="photo-upload">
+          <label>Después</label>
+          <div class="photo-drop" id="dropAfter" data-target="inputAfter">
+            <input type="file" id="inputAfter" accept="image/*" capture="environment" hidden>
+            <div class="photo-placeholder" id="placeholderAfter">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+              <span>Toque para agregar foto</span>
+            </div>
+            <img id="previewAfter" class="photo-preview" alt="Foto después">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUBMIT AREA -->
+    <div class="form-actions">
+      <button type="button" class="btn-secondary" id="btnReset">Limpiar formulario</button>
+      <button type="button" class="btn-primary" id="btnSave">Guardar ficha</button>
+    </div>
+
+  </form>
+</main>
+
+<footer class="form-footer">
+  <p>&copy; Massiel Daniela Ruiz Otairo — Historia Clínica Estética Facial</p>
+  <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">
+    Created with Perplexity Computer
+  </a>
+</footer>
+
+<script src="./app.js"></script>
+</body>
+</html>
