@@ -172,14 +172,13 @@
 
 
   // ── SAVE FORM ──────────────────────────────
-  document.getElementById('btnSave').addEventListener('click', () => {
+  document.getElementById('btnSave').addEventListener('click', async () => {
     const form = document.getElementById('fichaForm');
     const formData = new FormData(form);
     const data = {};
 
     for (const [key, value] of formData.entries()) {
       if (data[key]) {
-        // Handle multiple values (checkboxes)
         if (Array.isArray(data[key])) {
           data[key].push(value);
         } else {
@@ -208,21 +207,42 @@
       data.foto_despues = previewAfter.src;
     }
 
-    // Log data (in production, this would POST to a server)
-    console.log('Ficha guardada:', data);
+    // Send to server
+    const btnSave = document.getElementById('btnSave');
+    btnSave.disabled = true;
+    btnSave.textContent = 'Guardando...';
 
-    // Generate downloadable JSON
-    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    const nombre = data.apellido_nombre || 'paciente';
-    const fecha = new Date().toISOString().split('T')[0];
-    a.download = `ficha-${nombre.replace(/\s+/g, '-').toLowerCase()}-${fecha}.json`;
-    a.click();
-    URL.revokeObjectURL(url);
+    try {
+      const response = await fetch('./api/guardar.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
 
-    showToast('Ficha guardada correctamente');
+      const result = await response.json();
+
+      if (result.success) {
+        showToast('Ficha #' + result.id + ' guardada correctamente');
+      } else {
+        showToast('Error: ' + (result.error || 'No se pudo guardar'));
+      }
+    } catch (err) {
+      // Fallback: descargar como JSON si el servidor no está disponible
+      console.warn('Servidor no disponible, descargando JSON:', err);
+      const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      const nombre = data.apellido_nombre || 'paciente';
+      const fecha = new Date().toISOString().split('T')[0];
+      a.download = `ficha-${nombre.replace(/\s+/g, '-').toLowerCase()}-${fecha}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+      showToast('Servidor no disponible — ficha descargada como archivo');
+    } finally {
+      btnSave.disabled = false;
+      btnSave.textContent = 'Guardar ficha';
+    }
   });
 
 
